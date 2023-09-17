@@ -11,7 +11,7 @@ import asyncio
 
 class ScraperViewSet(CustomResponseMixin, viewsets.ViewSet):
 
-    @action(detail=False, methods=["post"], url_path="scrape_website")
+    @action(detail=False, methods=["post","get"], url_path="scrape_website")
     def scrape_website(self, request):
         serialized_data = inline_serializer(
             fields={
